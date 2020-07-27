@@ -7,7 +7,10 @@
         ],
         "components": [
           {
-            "/": "*"
+            "?": {
+              "edit": "?*"
+            },
+            "comment": "Should go to edit screen of Color Selector"
           }
         ]
       }

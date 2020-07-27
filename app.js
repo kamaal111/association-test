@@ -13,10 +13,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Views
 app.use('/', require('./routes'));
 
 // catch 404 and forward to error handler
-app.use((_req, _res, next) => {
+app.use((_request, _response, next) => {
   const err = new Error('File Not Found');
   err.status = 404;
 
@@ -24,19 +25,19 @@ app.use((_req, _res, next) => {
 });
 
 // error handler
-app.use((err, req, res) => {
+app.use((error, request, response) => {
   // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  response.locals.message = error.message;
+  response.locals.error = request.app.get('env') === 'development' ? error : {};
 
-  const error = {
-    message: err.message,
-    status: err.status,
-    stack: err.stack,
+  const errorToReturn = {
+    message: error.message,
+    status: error.status,
+    stack: error.stack,
   };
 
-  res.status(err.status || 500);
-  res.json(error);
+  response.status(error.status || 500);
+  response.json(errorToReturn);
 });
 
 module.exports = app;

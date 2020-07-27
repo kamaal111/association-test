@@ -2,9 +2,14 @@ const express = require('express');
 
 const router = express.Router();
 
-/* GET home page. */
-router.get('/', (req, res) => {
-  res.render('index', { title: 'Express' });
+router.get('/', (_request, response) => {
+  response.render('index', { title: 'Express' });
+  return null;
+});
+
+router.get('/edit', (request, response) => {
+  const { red, green, blue, colorName } = request.query;
+  response.render('edit', { title: 'Edit', red, green, blue, colorName });
   return null;
 });
 
