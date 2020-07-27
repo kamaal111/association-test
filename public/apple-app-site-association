@@ -1,0 +1,21 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "DXUKH9VF73.io.kamaal.ColorPicker"
+        ],
+        "components": [
+          {
+            "/": "*"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "DXUKH9VF73.io.kamaal.ColorPicker"
+    ]
+  }
+}
