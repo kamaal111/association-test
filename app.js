@@ -13,6 +13,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', require('./routes'));
+
 // catch 404 and forward to error handler
 app.use((_req, _res, next) => {
   const err = new Error('File Not Found');
