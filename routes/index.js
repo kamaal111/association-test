@@ -8,8 +8,15 @@ router.get('/', (_request, response) => {
 });
 
 router.get('/edit', (request, response) => {
-  const { red, green, blue, colorName } = request.query;
-  response.render('edit', { title: 'Edit', red, green, blue, colorName });
+  const { red, green, blue, alpha, colorName } = request.query;
+  response.render('edit', {
+    title: 'Edit',
+    red,
+    green,
+    blue,
+    alpha,
+    colorName,
+  });
   return null;
 });
 
