@@ -7,20 +7,12 @@
         ],
         "components": [
           {
-            "/": "*"
-          },
-          {
             "?": {
               "edit": "?*"
             }
           }
         ]
       }
-    ]
-  },
-  "webcredentials": {
-    "apps": [
-      "DXUKH9VF73.io.kamaal.ColorPicker"
     ]
   }
 }
