@@ -1,7 +1,18 @@
 {
+  "webcredentials": {
+    "apps": [
+      "DXUKH9VF73.io.kamaal.ColorPicker"
+    ]
+  },
   "applinks": {
     "details": [
       {
+        "apps": [],
+        "appID": "DXUKH9VF73.io.kamaal.ColorPicker",
+        "paths": [
+          "*",
+          "/edit?*"
+        ],
         "appIDs": [
           "DXUKH9VF73.io.kamaal.ColorPicker"
         ],
@@ -16,11 +27,6 @@
           }
         ]
       }
-    ]
-  },
-  "webcredentials": {
-    "apps": [
-      "DXUKH9VF73.io.kamaal.ColorPicker"
     ]
   }
 }
